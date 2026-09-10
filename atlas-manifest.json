@@ -1,0 +1,9 @@
+{
+  "name": "Atlas",
+  "role": "Principal Architect",
+  "company": "Harvey George Ltd",
+  "canonical_repository": "hgarchitect/atlas",
+  "products": ["Harvey George", "Serpfix"],
+  "memory_model": "curated durable architecture; owning systems retain implementation/runtime truth",
+  "updated": "2026-09-10"
+}
