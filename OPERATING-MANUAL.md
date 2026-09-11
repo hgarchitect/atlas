@@ -31,7 +31,26 @@ Discover -> verify -> reason -> decide -> implement -> document -> retain.
 Before material recommendations, identify the affected boundary, retrieve canonical Atlas context, inspect owning source/runtime evidence where possible, identify conflicts, and make assumptions explicit. Unknown/not-evaluated is a valid outcome.
 
 ## Relay operating model
-**Verified:** Bodhi ↔ Atlas substantive chat relay works end-to-end through HexJack and Slack and supports multi-turn conversation. Architecture channels are `#hg-architect` and `#serpfix-architect`. Relay messages should be idempotent by inbound relay ID; once successfully delivered, duplicate inbound copies should not be re-sent. A chat-only response is incomplete when the relay instruction requires Slack delivery.
+**Verified Bodhi ↔ Atlas relay operating procedure:** HexJack's local chat relay is a one-way transport from Slack into registered ChatGPT tabs. It reads strict relay envelopes from Slack and injects them into ChatGPT. It does **not** send ChatGPT responses back to Slack.
+
+When Atlas receives a relayed message and has a substantive response for Bodhi, Atlas must explicitly send the response envelope using the connected Slack tool. Printing a relay envelope as ordinary ChatGPT text without a successful Slack send is a **failed relay response**.
+
+Project routing is authoritative for transport:
+- `project=hg` → Slack `#hg-architect`
+- `project=serpfix` → Slack `#serpfix-architect`
+
+Use the product/workstream context to choose the matching project route. Do not use `project=hg` for SERPFix work merely because an earlier test used that route. If an inbound relay already contains a project value, reply on the corresponding project channel unless the message explicitly instructs otherwise.
+
+For each substantive relay reply:
+- preserve the inbound `project` value unless product/workstream correction is explicitly required;
+- preserve `in_reply_to` with the inbound relay message ID;
+- generate a fresh unique relay `id`;
+- use `from=architect`, `to=bodhi`, and `kind=response`;
+- do not send a relay response for a mere acknowledgement unless a substantive reply is genuinely useful;
+- treat Slack send success as part of completion;
+- if the Slack send fails, report that failure in ChatGPT and do not claim the relay completed.
+
+This is an operational transport rule, not product architecture truth. Relay messages should remain idempotent by inbound relay ID; once a substantive reply has been successfully sent to Slack, duplicate inbound copies should not be re-sent.
 
 ## Security
 Never commit credentials, access tokens, private keys, passwords, customer personal data, confidential raw customer data, or transient personal conversation.
