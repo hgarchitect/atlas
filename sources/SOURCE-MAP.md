@@ -1,5 +1,7 @@
 # Source Map
 
+**Access reconciliation:** 2026-10-29. Access checks below are dated observations; recheck availability and permissions before use.
+
 ## Atlas durable memory
 **Verified:** `hgarchitect/atlas` is Atlas's canonical durable operational/architectural memory. Canonical for curated principles, ADRs, architecture summaries, evidence gaps, focus, handoff, and cross-project routing. Not canonical for current runtime behaviour when stronger owning evidence exists.
 
@@ -14,12 +16,18 @@ Harvey George and SERPfIX are distinct project/product contexts. Route to the co
 - Do not copy task definitions into this repository; Confluence remains authoritative for them.
 
 ### Harvey George
-- Uses a separate Atlassian site from SERPfIX.
-- Jira/Confluence work must be routed to that Harvey George site. The exact site URL should be recorded here once verified from an owning source/connector.
+- **Verified 2026-10-29:** Harvey George Atlassian site is `https://wereonit.atlassian.net`, separate from SERPfIX.
+- Direct authenticated curl checks using the Harvey George environment variables returned HTTP 200 for Jira `GET /rest/api/3/myself` (active account) and Confluence `GET /wiki/rest/api/space?limit=1` (space listing accessible).
+- These checks verify authentication and those read endpoints only; they do not establish project-specific permissions, write access, current delivery state or runtime conformance.
+- **Verified local access configuration:** `HARVEYGEORGE_JIRA_API_TOKEN`, `HARVEYGEORGE_JIRA_EMAIL` and `HARVEYGEORGE_BASE_URL` are persisted in Chris's existing private shell environment configuration. Values must never be copied into this repository. The email alias was populated from `JIRA_USERNAME` because `JIRA_EMAIL` was absent.
+- Explicitly load the private environment when a process has not inherited the aliases; recheck availability without printing values.
 - HGW is the currently identified Harvey George website delivery Jira project; verify against the connected Harvey George site when live state matters.
 
 ### Atlassian connector constraint
-The OpenAI Atlassian connector exposes only one Atlassian site at a time. Before Jira or Confluence work:
+**Verified alternative transport 2026-10-29:** Chris authorised direct curl access to the Harvey George site using the dedicated variables above, and the read checks succeeded. This provides a site-specific access path independently of the Atlassian connector's selected site. Verify the target base URL and use only the matching product credentials; never substitute SERPfIX credentials. This does not expand authority to deploy, alter production or perform unrelated writes.
+
+The connector is documented here as exposing one Atlassian site at a time; its current selected site was not checked during this reconciliation. Before using the connector for Jira or Confluence work:
+
 1. identify the target project;
 2. verify the connected Atlassian site matches that project;
 3. if it does not, stop rather than using the other workspace, tell Chris which project/site connection must be switched, and follow any task-specific failure procedure available from the control plane.
@@ -39,7 +47,21 @@ The OpenAI Atlassian connector exposes only one Atlassian site at a time. Before
 **Verified:** onboarding discovery used temporary documents including `Atlas - Harvey George Source Discovery - 2026-09-09`, `Atlas - Serpfix Source Discovery - 2026-09-09`, and `Atlas - Harvey George Ltd Architecture Baseline - 2026-09-09`. These are transitional working memory, not competing sources of truth.
 
 ## Implementation / architecture repositories
-**Needs verification:** Harvey George main application repository exact slug/content. `wereonit/harveygeorge-architecture` is the identified intended Harvey George architecture repository identity, pending direct inspection/review state.
+### Harvey George local workspace
+**Verified 2026-10-29:** accessible local Git workspace is `/home/christopher/development/harveygeorge-workspace`. The previously suggested `/home/christopher/harveygeorge-workspace` does not exist on the checked host.
+
+The following checkout paths and configured origin URLs were inspected locally:
+
+| Checkout under `repos/` | Configured Bitbucket origin |
+| --- | --- |
+| `HG-Web` | `git@bitbucket.org:wereonit/HG-Web.git` |
+| `HG-Web-php83-security` | `git@bitbucket.org:wereonit/HG-Web.git` |
+| `harveygeorge-architecture` | `git@bitbucket.org:wereonit/harveygeorge-architecture.git` |
+| `harveygeorge-terraform` | `git@bitbucket.org:wereonit/harveygeorge-terraform.git` |
+| `playwright-tool` | `git@bitbucket.org:wereonit/playwright-tool.git` |
+| `playwright-tool-hgw264` | `git@bitbucket.org:wereonit/playwright-tool.git` |
+
+These are six local checkouts of four configured remote repository identities. Local presence and origin configuration do not establish remote reachability, freshness, branch suitability, implementation content, architecture acceptance or deployed revision. Those remain **Needs verification** before relying on them for architectural conclusions.
 
 **Reported:** active SERPfIX repository identities include `serpfix-seo-intelligence`, `serpfix-portal`, `serpfix-terraform`, `serpfix-platform-architecture`, and `serpfix-seo-intelligence-architecture`; important product repositories are reported Bitbucket-hosted and have not yet been directly inspected. Do not describe them as inspected GitHub sources.
 

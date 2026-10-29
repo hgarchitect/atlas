@@ -1,6 +1,7 @@
 # Harvey George — Current State
 
-**Snapshot:** 2026-09-10  
+**Architecture baseline:** 2026-09-10  
+**Access/source reconciliation:** 2026-10-29  
 **Confidence:** mixed; classifications below are intentional.
 
 ## Verified
@@ -18,4 +19,9 @@
 - A database-backed session migration is historical evidence contradicting the bootstrap shorthand “Redis sessions/cache”; current session/cache ownership must not be assumed.
 
 ## Needs verification
-Exact app repo/branch/commit; Laravel/Aimeos/PHP/EB platform versions; session/cache drivers and Valkey usage; AWS topology/resource names/IAM/alarms; RDS details; current observability/log shipping; integration/provider configuration; exact builder persistence/export ownership.
+Authoritative app branch/commit and remote freshness; Laravel/Aimeos/PHP/EB platform versions; session/cache drivers and Valkey usage; AWS topology/resource names/IAM/alarms; RDS details; current observability/log shipping; integration/provider configuration; exact builder persistence/export ownership.
+
+## Access and source discovery — verified 2026-10-29
+- Harvey George Jira and Confluence are reachable at `https://wereonit.atlassian.net`. Authenticated curl checks returned HTTP 200 for Jira account identity and Confluence space listing.
+- Local source workspace is `/home/christopher/development/harveygeorge-workspace`; the `repos/HG-Web` checkout has configured origin `git@bitbucket.org:wereonit/HG-Web.git`. Architecture, Terraform and Playwright checkouts are also present; see [Source Map](../../sources/SOURCE-MAP.md) for routing and the full inventory.
+- This reconciliation establishes access and configured repository identities. It does not reverify the September architecture baseline, inspect application behaviour, establish Jira write permissions or prove production conformance.
