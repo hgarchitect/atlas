@@ -72,6 +72,13 @@ These are six local checkouts of four configured remote repository identities. L
 
 **Reported:** active SERPfIX repository identities include `serpfix-seo-intelligence`, `serpfix-portal`, `serpfix-terraform`, `serpfix-platform-architecture`, and `serpfix-seo-intelligence-architecture`; important product repositories are reported Bitbucket-hosted and have not yet been directly inspected. Do not describe them as inspected GitHub sources.
 
+## Harvey George regression and change confidence
+**Verified source access, 2026-10-29:** the named Bitbucket refs `wereonit/playwright-tool` main and `wereonit/HG-Web` release/production were fetched through local Git and selected source/tests inspected. This establishes read access and those specific observations; it does not establish comprehensive coverage, passing tests or deployed conformance.
+
+- [HGW-258](https://wereonit.atlassian.net/browse/HGW-258): existing local Playwright platform epic.
+- [Journey catalogue](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/206077953) and [local setup/runbook](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/206045185): detailed test cases, instructions and dated evidence; verify current executable names in Toolbox source.
+- [Testing and Change Confidence](../products/harvey-george/testing-and-change-confidence.md): Chris's confirmed architectural priority, feature sequencing, selected source evidence and remaining coverage/migration decisions. Jira/Confluence retain delivery and detailed testing truth.
+
 ## AWS/runtime
 For both products, direct AWS/runtime evidence owns what is actually running. Exact accounts, regions, resource topology, IAM, alarms and deployed revisions remain Needs verification.
 
