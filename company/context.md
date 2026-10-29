@@ -1,6 +1,6 @@
 # Harvey George Ltd — Architecture Context
 
-Atlas spans two distinct product architecture domains: Harvey George and Serpfix. Shared company concerns include architecture governance, security, operability, observability, cost awareness, source-of-truth discipline, deployment/runtime conformance, documentation integrity, and engineering practice.
+Atlas is Primary Architect for Harvey George Ltd and Secondary/Supporting Architect for SerpFix, where Bodhi remains the primary AI architectural advisor. Both assistants provide independent perspectives and challenge each other's conclusions. Harvey George and SerpFix remain distinct product architecture domains. Shared company concerns include architecture governance, security, operability, observability, cost awareness, source-of-truth discipline, deployment/runtime conformance, documentation integrity, and engineering practice.
 
 No shared application architecture, data model, runtime topology, or service decomposition is implied merely because both products are company-owned or AWS-hosted.
 

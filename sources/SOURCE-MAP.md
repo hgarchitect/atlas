@@ -5,6 +5,9 @@
 ## Atlas durable memory
 **Verified:** `hgarchitect/atlas` is Atlas's canonical durable operational/architectural memory. Canonical for curated principles, ADRs, architecture summaries, evidence gaps, focus, handoff, and cross-project routing. Not canonical for current runtime behaviour when stronger owning evidence exists.
 
+## Architectural responsibility
+**Agreed with Chris, 2026-10-29:** Atlas is Primary Architect for Harvey George Ltd and Secondary/Supporting Architect for SerpFix. Bodhi remains the primary AI architectural advisor for SerpFix. Both assistants provide independent perspectives and challenge each other's conclusions. See `ATLAS.md` and `OPERATING-MANUAL.md` for the governing charter and operating boundaries.
+
 ## Project routing and control planes
 Harvey George and SERPfIX are distinct project/product contexts. Route to the correct owning systems before doing project work; never substitute one workspace for the other.
 
@@ -40,8 +43,12 @@ The connector is documented here as exposing one Atlassian site at a time; its c
 - Running systems/AWS/telemetry: actual deployed/runtime behaviour.
 - Implementation repositories, contracts, schemas and tests: executable behaviour.
 
-## Slack / HexJack
-**Verified:** architecture collaboration channels include `#hg-architect` and `#serpfix-architect`. Bodhi ↔ Atlas HexJack relay is proven end-to-end for substantive multi-turn conversation. Slack/chat is collaboration evidence, not permanent architecture memory; promote durable conclusions here.
+## Bodhi ↔ Atlas communication
+**Current position — corrected by Chris, 2026-10-29:** Neither the Slack relay through HexJack nor the subsequent browser-to-browser experiment is an established operational communication capability. Chris reports reliability failures in both; previous claims of a proven end-to-end relay are superseded.
+
+**Historical:** The Slack experiment used `#hg-architect` and `#serpfix-architect`, with one-way Slack-to-ChatGPT injection and a separate explicit return send. These route and implementation notes do not verify current connectivity or reliability. Historical details are retained in `OPERATING-MANUAL.md`; they are not activation or automatic-response instructions.
+
+**Architectural objective / Needs verification:** reliable, bidirectional Bodhi ↔ Atlas communication requires further engineering, agreed acceptance criteria and verification. No replacement mechanism is adopted here. Track open decisions in `work/architectural-backlog.md`. Slack/chat, if used through an authorised path in future, remains collaboration evidence; promote durable architectural conclusions into the appropriate knowledge source.
 
 ## Google Drive
 **Verified:** onboarding discovery used temporary documents including `Atlas - Harvey George Source Discovery - 2026-09-09`, `Atlas - Serpfix Source Discovery - 2026-09-09`, and `Atlas - Harvey George Ltd Architecture Baseline - 2026-09-09`. These are transitional working memory, not competing sources of truth.

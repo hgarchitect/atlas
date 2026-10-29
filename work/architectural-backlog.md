@@ -1,6 +1,7 @@
 # Architectural Backlog
 
 ## Company
+- [ ] Engineer and verify reliable bidirectional Bodhi ↔ Atlas communication. The Slack/HexJack and browser-to-browser experiments are historical and unreliable; neither is operationally established (Chris's correction, 2026-10-29). Agree transport and ownership, identity/authentication and product isolation, delivery/reply semantics, timeout/retry/acknowledgement/duplicate handling, observability and recovery, and measurable reliability acceptance criteria before implementation and operational acceptance. No mechanism is selected or activated by this entry.
 - [ ] Confirm remaining technology decision/ownership roles.
 - [ ] Keep source authority map current as connectors/repositories become accessible.
 
