@@ -2,6 +2,22 @@
 
 **Direction agreed with Chris:** 2026-10-29.
 
+## Developer-first regression workflow and checkout terms — Chris, 2026-10-30
+
+**Current delivery direction:** the first iteration is convenient developer-local execution of one test, a selected set, or the default suite. The longer-term aim is agreed release-candidate checks in CI/CD before deployment. No pipeline has been activated. Product Builder/Save Progress and Recommend a Friend implementation must not start yet; existing proofs/spikes are investigations, not delivered or authorised feature implementation.
+
+**Delivered and verified locally:** [HGW-274](https://wereonit.atlassian.net/browse/HGW-274) adds the named `checkout-terms` regression and `functional suite --scenarios name[,name]`. Selection validates distinct exact default names before environment preparation; the suite owns fresh setup, fixtures, cleanup and teardown. Focused/deferred experiments are not admitted by this selection option. Omit it to run the default suite. The basic selection convenience does not complete HGW-272's risk/upgrade profiles, baseline/candidate comparisons or sign-off work.
+
+Tool main is verified at `e2e745d80c16993f16d338ec65dbdd7937039705`, a documentation successor to tested executable `f2e3f9d368122608bd7a9908f2a2130d1c930e6b`; fingerprint `9e01b3dca0ed7fb8a5576ccf41b00609d8d34eb37704b149f04e8f0c5a3a2094` is unchanged. HG-Web remains unchanged at `9246932e82c88591a8efed7ef92faf8c66de8875`, retaining full asset isolation. The independent selected case and all **twelve default native journeys** passed on 30 October; all case cleanup and full teardown passed. Utility 47/47 and guarded-browser 71/71 passed. No deferred native draft/referral proof was rerun.
+
+The test clicks the actual checkout footer Terms & Conditions link to the reported clean path, requires local-origin HTTP200 HTML plus the expected visible heading and unique owned CMS paragraph, then verifies unchanged checkout/basket/identity/address/totals and unaccepted consent. Server checks verify the active owned CMS row and zero orders/payment events. Controlled negative tests detect404, wrong-page200, soft404, unsupported popup targets, external hrefs and forbidden redirects; these test assertion/guard logic rather than reproducing a live incident. The existing per-page popup interception policy remains fail-closed.
+
+**Reported incident remains unresolved:** Chris supplied `https://harvey-george.com/store-terms-and-conditions` after an office report of404. No live request was made. Owned active CMS content succeeds on the inspected candidate, so production deployment/content/slug/publication/redirect parity remains unknown. HGW-274 stays In Review to preserve that open report; do not declare a live fix or blame a developer from synthetic success. The separate consent-checkbox `/terms` link and other policy links are outside this case.
+
+[Adding a regression: checkout terms worked example](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/215580718) explains report-to-contract-to-fixture-to-test-to-evidence intake and its parameters. [PW-12](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/215613517) owns business/technical case evidence. The [default catalogue](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/206077953) now has twelve individual pages, all refreshed with the 30 October run. The old eleven-case evidence retains its original dated meaning. HGW-258 now has fifteen children including HGW-274; feature proof/acceptance parents remain unchanged.
+
+No application source edits, production probes/instance or release-branch changes, deployments, CI/CD triggers, live data/credentials, real S3 fallback, automatic visual approvals or new feature implementation occurred. The normal authorised fast-forward published only Playwright tooling. Jira/Confluence evidence, case counts/hierarchy and remote Git publication were read back and verified.
+
 ## Current instructions and approved referral policy — Chris, 2026-10-30
 
 This is the current operating direction; dated 29 October findings below remain historical evidence rather than a request to execute their old queue.
