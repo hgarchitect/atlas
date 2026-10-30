@@ -2,6 +2,20 @@
 
 **Direction agreed with Chris:** 2026-10-29.
 
+## Current instructions and approved referral policy — Chris, 2026-10-30
+
+This is the current operating direction; dated 29 October findings below remain historical evidence rather than a request to execute their old queue.
+
+**Verified source integration:** Chris reviewed, accepted and merged HG-Web PR #306. Git `origin/feature/chris` is merge `439958daf300be7d06a5570c4b7c98c6dc4f9416`, containing candidate `9246932e`; both tracked trees are `7ba51dec4e93fd88c58b0dd08310753396f9bae8`. HGW-265 is Done. Do not ask Chris to review/merge this PR again. Git/tree equivalence is not a new application test, deployment or production-runtime observation.
+
+**Scope correction:** HGW-228 was inherited from the older production-security queue and is outside the current local regression programme. Make no further production probes; do not seek a WAF bypass, alternate production route or human production check to unblock local testing. The previous request for such access/manual verification is withdrawn. The remaining live HGW-231 observability/log-delivery work is likewise deferred; its logging source fix is merged but no live shipping/configuration work is authorised. Both tickets were moved from In Progress to To Do with this correction. Existing historical evidence limits remain recorded. Production-instance edits, production-branch commits/pushes and deployment remain prohibited.
+
+**Current timing:** Chris explicitly deferred HGW-268 and Save Progress contract/implementation work until next week. Do not start or further reproduce them now. Carl's actual admin regressions are expected later on 30 October; wait for the cases and add named local regression cases to the existing Playwright framework under HGW-258 when supplied. There is no invented admin defect/ticket, automatic follow-up or scheduled run in this update. Retain the full local asset-isolation safeguards and guarded browser.
+
+**Approved referral lifecycle:** Chris confirmed issuance and consumption on received payment (`PAY_RECEIVED`). Issue once per qualifying original order; atomically reserve before recipient payment, retain the reservation while authorised, pending or uncertain, and consume exactly once when recipient payment is received. Release a still-reserved matching attempt only after confirmed failure/cancellation, once; a late event must not release a consumed voucher. Browser closure, elapsed time and an unknown gateway result are not confirmed failure. No arbitrary automatic-release deadline is introduced. Refunds trigger manual review without automatically reopening the code. Finance retains manual discretion and the website performs no funds movement. These defaults are approved; do not ask Chris to reconfirm them because historical audit text called them unresolved.
+
+The approval does not implement or verify an atomic mechanism. The native negative proofs remain valid and implementation must follow the approved policy, with other genuinely unspecified campaign details addressed in their owning work when required. The contract in Tool `docs/HGW-256-reservation-contract.md`, Jira HGW-246/249/256 and the referral Confluence specification/audit are updated. Tool documentation-only publication `5fff55763b7d295e26b1dc4cb3fb6abfde7aa989` leaves executable fingerprint `aa16c312a4a50a2cead81f8fe4c9d1b8ed2b844573849782373eb273af705049` unchanged. No application implementation, browser/test run, production endpoint or infrastructure operation was performed for this reconciliation.
+
 ## Architectural priority
 A dependable, repeatable local regression capability is the enabling priority for security maintenance, framework/dependency upgrades and product development. Capture behaviour as executable assertions rather than relying on humans to rediscover regressions after each change. Human acceptance and visual review remain useful alongside automated checks.
 
