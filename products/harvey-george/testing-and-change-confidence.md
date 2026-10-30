@@ -25,6 +25,16 @@ Preserve the existing customer-experience sequence: **Save Progress and email re
 
 Use the existing **HGW-258 Playwright testing platform epic** as the starting point. Do not infer that unrelated/unparented old tickets are obsolete; revalidate their scope and evidence before proposing disposition.
 
+## Backlog completeness review — 2026-10-30
+
+Chris reaffirmed that this framework is intended to protect major changes and upgrades. Live Jira review found HGW-258 In Progress with seven children: five foundation tasks Done (257, 259, 260, 261, 262) and 264/268 To Do. The current catalogue has eleven default storefront journeys and separate focused scenarios; the launcher is Chromium-only. These are source observations, not a fresh execution. Existing HG-Web backend tests complement the browser layer.
+
+The review identifies missing dedicated active capability work for reusable admin coverage, JSON API consumer/contracts, local application security regressions, major-upgrade acceptance/coverage traceability with safe backend/migration checks, and an agreed browser/device/visual-reference matrix. These are proposed follow-up workstreams, not newly created Jira children or committed delivery. Reuse/link existing catalogue audit HGW-263, sitemap HGW-190, legacy smoke HGW-197 and feature-specific acceptance HGW-245/253 rather than duplicating them. HGW-255/256 remain in their feature epics.
+
+Reconcile HGW-264's To Do status with its implementation and dated delivery evidence before treating status as implementation truth. HGW-261 explicitly delivered a future CI proposal only; its Done state does not establish CI execution or an automatic PR gate. Tool guard/utility counts and asset acceptance do not establish comprehensive application security/admin coverage or approved visual references. The platform foundation can already accept Carl's real cases; broadening coverage is evolutionary work, not a reason to delay case intake or rebuild the runner.
+
+Detailed inventory and proposals are recorded on [HGW-258 review comment 11673](https://wereonit.atlassian.net/browse/HGW-258?focusedCommentId=11673). No statuses were changed, no new tickets created and no tests/production/deferred implementation work executed for this audit. The existing production prohibition and next-week deferral of HGW-268/Save Progress remain in force.
+
 ## Owning sources and inspected evidence
 - [HGW-258](https://wereonit.atlassian.net/browse/HGW-258) owns the current local browser-testing programme; feature-specific proofs remain [HGW-255](https://wereonit.atlassian.net/browse/HGW-255) and [HGW-256](https://wereonit.atlassian.net/browse/HGW-256).
 - [Journey catalogue](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/206077953), [local setup/runbook](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/206045185), and [results/visual regression](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/205914122) own detailed testing instructions and dated acceptance evidence.
