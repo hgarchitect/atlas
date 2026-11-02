@@ -3,6 +3,16 @@
 **Direction agreed with Chris:** 2026-10-29.
 
 
+## HGW-281 fix candidate — verified 2026-11-02
+
+Chris explicitly authorised implementation of HGW-281 as separate work, superseding the earlier diagnosis-only boundary for this issue. Other pending fixes are not automatically authorised. The pushed application branch `feature/hgw-281-attribute-text-edit-20261102` is at `ead55595e988cf39be30959f0ecc2f5014680628`, based on accepted feature/chris `4ec8d51f`; its sole changed file is the custom Attribute → Text template. **PR destination is feature/chris. Actual PR creation is still a UI step with the available Git-only transport; no application merge or release operation occurred.**
+
+**Verified cause and behaviour:** the template read product reference ownership/metadata for attribute text. Current-site text therefore received the yellow mismatch indicator and failed the native edit predicate. Correct attribute reference fields restore editing without bypassing native ownership checks. Standard text now explains genuine other-site locks or missing ownership; descendant-site edits retain the native allowed state with an explanatory warning. JSON editor implementation and asset safeguards are unchanged.
+
+[HGW-293 owning case, before/after images, exact receipts and ready PR details](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/217546789) and [dated Tool evidence](https://bitbucket.org/wereonit/playwright-tool/src/40c19bad4257083acaa9a32c680b949359384ac4/docs/evidence/2026-11-02-HGW-281-attribute-text.md) record the matched pre-fix FAIL / candidate PASS and independent text/layout PASS. IDs, translation and reference dates/type/site survive native Save/reopen; customer write403 preserves state. Five controlled ownership-notice cases use the installed predicate/template; these are not native multisite persistence proof. The initial notice inspector's template-slot lookup error was corrected, with failed receipts retained. The paired aggregate retains the failed baseline and is not an overall acceptance pass.
+
+Tool main `40c19ba` publishes tested `5803504e` / fingerprint `e6b00cc1b7e30d933d43ad8e1322d90c54de95b6d505ec16ec540dd8beb62bcf`. Utility77/safety84 and receipt schemas pass; all eight retained native cleanups/seven teardowns pass. HGW-281 and HGW-293 remain **In Review**, awaiting application review/merge. The related layout case passes without CSS changes, but the distinct original divider report/HGW-282 is not closed. No live-record, production/staging, full-profile, deployment or visual-baseline acceptance is claimed.
+
 ## Functional branch comparison — verified 2026-11-02
 
 A read-only final-tree audit compared HG-Web release/production `5feea1ae9bdbadb825064d11285029e7a1271e95` with feature/chris `4ec8d51fe14c8f7207a3c11c26cc23a2e91b389a`. Production is an ancestor; 33 Chris-side commits resolve to 95 changed paths. The [owning audit and complete classified inventory](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/218464257) retain exact sources and limits.

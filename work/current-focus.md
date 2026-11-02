@@ -15,6 +15,9 @@ Four unattended diagnostic investigations are published; category/API coverage i
 ## Branch promotion review — source audit 2026-11-02
 [Production-versus-Chris audit](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/218464257) finds bounded storefront/operational changes beyond assets and no cabinet-construction redesign. Source/isolated-unit evidence is not production approval. Review the actual functional list and existing known failures before any future promotion; retain the production ban and protected asset branches.
 
+## HGW-281 implementation exception — 2026-11-02
+Chris authorised the focused attribute-text fix. Candidate ead55595 is pushed on its own branch from Chris4ec8d51f, with matched red/green and independent text/layout proof; HGW-281/293 remain In Review. Actual Bitbucket PR creation is pending; target feature/chris only. The earlier diagnosis-only boundary remains for other issues. [Owning evidence and PR details](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/217546789); preserve asset guards and all production/staging restrictions.
+
 ## Existing cross-product verification backlog
 1. Verify implementation repositories: Harvey George main app and Serpfix `serpfix-seo-intelligence` first.
 2. Verify infrastructure intent: Serpfix `serpfix-terraform`; Harvey George deployment/infrastructure source and pipeline configuration.
