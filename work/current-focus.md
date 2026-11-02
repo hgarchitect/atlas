@@ -1,6 +1,6 @@
 # Current Architectural Focus
 
-**Updated:** 2026-11-01
+**Updated:** 2026-11-02
 
 Bootstrap has moved from scaffold creation into evidence-backed verification. `hgarchitect/atlas` is now the durable memory target; Drive handoffs are transitional.
 
@@ -11,6 +11,9 @@ Preserve Save Progress/email recovery (HGW-237) first and referrals/finance work
 
 ## Current Harvey George phase — 2026-11-01
 Four unattended diagnostic investigations are published; category/API coverage is Done, while HGW-297 intermittent asset proof and HGW-299 server validation remain In Review. FixHGW-301 remains To Do. Diagnosis and remediation are separate work. Preserve every HGW-259/HGW-262 asset-safety branch during cleanup, including integrated branches. PR309 is accepted into feature/chris; release/production and all production/staging runtime activity remain prohibited in this programme. See the testing topic and owning Jira/Confluence for exact current evidence and remaining acceptance decisions.
+
+## Branch promotion review — source audit 2026-11-02
+[Production-versus-Chris audit](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/218464257) finds bounded storefront/operational changes beyond assets and no cabinet-construction redesign. Source/isolated-unit evidence is not production approval. Review the actual functional list and existing known failures before any future promotion; retain the production ban and protected asset branches.
 
 ## Existing cross-product verification backlog
 1. Verify implementation repositories: Harvey George main app and Serpfix `serpfix-seo-intelligence` first.

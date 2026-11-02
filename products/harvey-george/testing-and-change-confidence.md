@@ -3,6 +3,16 @@
 **Direction agreed with Chris:** 2026-10-29.
 
 
+## Functional branch comparison — verified 2026-11-02
+
+A read-only final-tree audit compared HG-Web release/production `5feea1ae9bdbadb825064d11285029e7a1271e95` with feature/chris `4ec8d51fe14c8f7207a3c11c26cc23a2e91b389a`. Production is an ancestor; 33 Chris-side commits resolve to 95 changed paths. The [owning audit and complete classified inventory](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/218464257) retain exact sources and limits.
+
+**Verified in source:** no cabinet-construction redesign was found. Product schemas, dependencies/locks, migrations, checkout-named source files, routes and deployment inputs are unchanged. Outside local asset support, bounded changes are handle subtotal/summary event refresh, mobile category focus/Escape and unused-control removal, obsolete basket-binding removal, sensitive debug-log retirement, production/attested-local-only sitemap policy, and a manually invoked attested-local read-only catalogue audit. The existing subtotal arithmetic, handle-count/assignment and geometry rules are unchanged. The serializer/hash algorithm is unchanged, but its pre-existing `currentPrice` input can change after the stale-price correction, so identical hashes for that case are not promised.
+
+**Fresh isolated proof:** the same handle regression fails against the production-reference source and passes on Chris; six standalone PHP checks verify production configuration/pass-through, local activation boundaries, sitemap policy and logging/repair behaviour without application bootstrap, database or network operations. This is source/isolated-unit evidence, not a fresh full native profile or deployed-production acceptance. Dataset/asset-byte parity was not evaluated.
+
+**Decision boundary:** Chris asked for an audit before considering promotion. No HG-Web code, branch or runtime mutation, merge or deployment occurred. Asset isolation and explicit HGW-259/HGW-262 branch protection remain required. Small bug fixes may be prepared separately from current Chris, but an eventual promotion must review the bounded functional/operational list and replay agreed local gates, including open known failures. Production/staging runtime verification and release authorisation are separate.
+
 ## Current diagnostic scope and branch hygiene — verified 2026-11-01
 
 Chris explicitly separated diagnosis/regression coverage from remediation. Application fixes and runner readiness changes require separate work: do not add waits, selector workarounds, retries-to-pass or assertion waivers during these investigations. HG-Web source remained read-only; Tool publication to main was authorised. Full local asset isolation, the production/staging ban and deferred Save Progress/referral boundaries remain in force.
