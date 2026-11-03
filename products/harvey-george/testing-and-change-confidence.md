@@ -3,6 +3,18 @@
 **Direction agreed with Chris:** 2026-10-29.
 
 
+## HGW-302 attribute prices — verified 2026-11-03
+
+Chris authorised [fix HGW-302](https://wereonit.atlassian.net/browse/HGW-302) and [regression HGW-303](https://wereonit.atlassian.net/browse/HGW-303) as separate delivery items, under HGW-275 and HGW-258 respectively. Application candidate `ca24cfc33d89e750c524bd91c97a333ac02a1a80` is pushed from Chris `4ec8d51f` on `feature/hgw-302-attribute-prices-20261103`; target **feature/chris**, PR creation/acceptance outstanding. The only application change adds `price` and `price/property` to the custom attribute reference-domain list. Native editor, permissions and Save remain in use, without price recreation, arithmetic, schema, dependency or asset-support change.
+
+**Configuration lesson:** a custom reference-domain list replaces upstream defaults. An editable screen can appear empty when persisted related data was never loaded. Restore the price and its properties together, distinguish zero from absence, and independently verify unchanged Save as well as an intended edit, preserving original identities and related fields.
+
+[PAR-06](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/220725249) and [Tool evidence](https://bitbucket.org/wereonit/playwright-tool/src/56d272b0d9dfe92d4a735e70f370b626cddbb483/docs/evidence/2026-11-03-HGW-302-attribute-prices.md) own the matched current-Chris FAIL → candidate PASS plus independent PASS. The new `admin-attribute-prices` case checks paid/tiered values, native edit/reopen and unchanged Save, original price/relation IDs, currency/tax/quantity/dates/configuration/properties, legitimate zero and no-price records, real customer403 and unrelated state. Selected cleanup/teardown and the unchanged native asset gate pass; utility77/guarded-browser84 pass. Earlier selector failures and unresolved native navigation timeouts remain retained; the passing runs do not erase them or certify other reports.
+
+Tool main `56d272b0d9dfe92d4a735e70f370b626cddbb483` is a documentation-only successor to tested executable `4ed84114d4340a03fd2ade5c09054e5a2093b483`, retaining fingerprint `aecaa37518af6a3aa79444b2b3df5ae0db1f84ff69500df7ca7b2525e9e97a92`. Extended selects28 and reported-regressions6; default12/critical16 remain unchanged. This focused case and asset run are not a fresh full-profile or production acceptance. HGW-302/303 remain In Review pending application acceptance and appropriate post-merge replay.
+
+Separate normal local browser review, using copies of the existing workstation database/objects (age unknown), displays Stone Resin Sinks103584's original price11312/GBP75 with editable native controls. No real-catalogue Save was automated; only owned synthetic fixtures are used for save proof. Original data and HGW-276/281/283 review environments are preserved. Full asset isolation/real fallback false, protected HGW-259/262 branches, the production/staging ban and deferred feature boundaries remain in force.
+
 ## HGW-283 association removal — verified 2026-11-03
 
 Chris separately authorised the focused fix. Application branch `feature/hgw-283-product-unlink-20261103` is pushed at `9f005c5b5b8919fde6ac637b86c280700937684a`, from current Chris `4ec8d51f`; destination **feature/chris**, PR creation/acceptance outstanding. Fifteen lines in the existing Attribute/Product controller process native `product[delete][]` IDs through the existing transaction/list manager, constrained by attribute parent, product domain and native site prefix. No product deletion, absence-based pruning, template/dependency/schema/asset-support or builder/pricing change.
