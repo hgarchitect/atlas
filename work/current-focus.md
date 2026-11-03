@@ -1,6 +1,6 @@
 # Current Architectural Focus
 
-**Updated:** 2026-11-02
+**Updated:** 2026-11-03
 
 Bootstrap has moved from scaffold creation into evidence-backed verification. `hgarchitect/atlas` is now the durable memory target; Drive handoffs are transitional.
 
@@ -15,8 +15,11 @@ Four unattended diagnostic investigations are published; category/API coverage i
 ## Branch promotion review — source audit 2026-11-02
 [Production-versus-Chris audit](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/218464257) finds bounded storefront/operational changes beyond assets and no cabinet-construction redesign. Source/isolated-unit evidence is not production approval. Review the actual functional list and existing known failures before any future promotion; retain the production ban and protected asset branches.
 
+## HGW-276 implementation exception — 2026-11-03
+Chris authorised the focused attribute-product configuration fix. Candidate `0d58d7c4` is pushed from Chris `4ec8d51f` on its own branch; PR destination **feature/chris**, creation/acceptance outstanding. Matched red/green and independent replay prove stored configuration preservation; HGW-276/291 remain In Review. Tool main `ebd1333` carries the expanded guarded regression. Separate native local catalogue review is ready; original data and HGW-281 review environment remain intact. [Owning evidence](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/217546754) retains the passing asset pair and earlier unresolved HGW-297 interruption. Preserve asset guards, protected branches and production/staging restrictions; other fixes still need their own authority.
+
 ## HGW-281 implementation exception — 2026-11-02
-Chris authorised the focused attribute-text fix. Candidate ead55595 is pushed on its own branch from Chris4ec8d51f, with matched red/green and independent text/layout proof; HGW-281/293 remain In Review. Actual Bitbucket PR creation is pending; target feature/chris only. The earlier diagnosis-only boundary remains for other issues. [Owning evidence and PR details](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/217546789); preserve asset guards and all production/staging restrictions.
+Chris authorised the focused attribute-text fix. Candidate ead55595 is pushed on its own branch from Chris4ec8d51f, with matched red/green and independent text/layout proof; HGW-281/293 remain In Review. Chris reports PR creation and referral to Carl for review on 2026-11-03; URL/number not supplied and no merge observed. Target feature/chris only. The earlier diagnosis-only boundary remains for other issues. [Owning evidence and PR details](https://wereonit.atlassian.net/wiki/spaces/HEC/pages/217546789); preserve asset guards and all production/staging restrictions.
 
 ## Existing cross-product verification backlog
 1. Verify implementation repositories: Harvey George main app and Serpfix `serpfix-seo-intelligence` first.
